@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargas - Atención Sociosanitaria</title>
+    <style>
+        /* Estilos básicos y limpios */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; padding: 20px; }
+        
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #2E7D32; margin-bottom: 10px; }
+        
+        /* Botones de las pestañas */
+        .tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
+        .tab-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid #4CAF50;
+            background-color: white;
+            color: #4CAF50;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .tab-btn:hover { background-color: #e8f5e9; }
+        .tab-btn.active { background-color: #4CAF50; color: white; }
+
+        /* Contenedores de las secciones */
+        .seccion { display: none; max-width: 800px; margin: 0 auto; }
+        .seccion.active { display: block; }
+
+        /* Tarjetas de los PDFs */
+        .bloque { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .bloque h2 { font-size: 16px; color: #555; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        
+        .item { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #f9f9f9; border: 1px solid #eee; border-radius: 6px; margin-bottom: 10px; }
+        .item-info { display: flex; align-items: center; gap: 15px; }
+        .icon-pdf { background: #e53935; color: white; padding: 10px 8px; font-size: 12px; font-weight: bold; border-radius: 4px; }
+        .item-title { font-weight: bold; font-size: 15px; color: #333; }
+        .item-file { font-size: 12px; color: #777; margin-top: 3px; }
+        
+        /* Botón de descarga/ver */
+        .btn-download { 
+            background: #4CAF50; color: white; text-decoration: none; 
+            padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: bold; 
+            transition: 0.2s; white-space: nowrap;
+        }
+        .btn-download:hover { background: #388E3C; }
+
+        /* Ajustes para móviles */
+        @media (max-width: 600px) {
+            .item { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .btn-download { width: 100%; text-align: center; }
+            .tabs { flex-direction: column; }
+            .tab-btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Material Formativo</h1>
+        <p>Descarga de Apuntes y Temarios</p>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="cambiarPestana('inst', this)">Instituciones Sociales</button>
+        <button class="tab-btn" onclick="cambiarPestana('dom', this)">Domicilio</button>
+    </div>
+
+    <!-- SECCIÓN INSTITUCIONES -->
+    <div id="inst" class="seccion active">
+        
+        <div class="bloque">
+            <h2>UC1016 Preparar y apoyar las intervenciones...</h2>
+            
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0127: Apoyo en la recepción y acogida</div>
+                        <div class="item-file">UF0127.pdf</div>
+                    </div>
+                </div>
+                <!-- target="_blank" abre el pdf en otra pestaña. El navegador no lo bloquea. -->
+                <a href="pdfs/UF0127.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0128: Apoyo en la organización de actividades</div>
+                        <div class="item-file">UF0128.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF0128.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <h2>UC1017 Desarrollar intervenciones de atención física...</h2>
+            
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">MF1017_2: Intervención en la atención higiénico-alimentaria</div>
+                        <div class="item-file">MF1017.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/MF1017.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <h2>UC1018 Desarrollar intervenciones de atención socio-sanitaria...</h2>
+            
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">MF1018_2: Intervención en la atención sociosanitaria</div>
+                        <div class="item-file">MF1018.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/MF1018.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <h2>UC1019 Intervenciones de atención psico-social...</h2>
+            
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0129: Animación social de personas dependientes</div>
+                        <div class="item-file">UF0129.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF0129.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0130: Mantenimiento y mejora de las actividades diarias</div>
+                        <div class="item-file">UF0130.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF0130.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0131: Técnicas de comunicación con personas dependientes</div>
+                        <div class="item-file">UF0131.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF0131.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DOMICILIO -->
+    <div id="dom" class="seccion">
+        
+        <div class="bloque">
+            <h2>UC0249_2 Desarrollar intervenciones de atención física domiciliaria...</h2>
+            
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0119: Características y necesidades de atención higiénico-sanitaria</div>
+                        <div class="item-file">UF119.pdf</div>
+                    </div>
+                </div>
+                <!-- OJO: Aquí he puesto UF119.pdf (sin puntos ni espacios) -->
+                <a href="pdfs/UF119.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0120: Administración de alimentos y tratamientos</div>
+                        <div class="item-file">UF120.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF120.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0121: Mejora de las capacidades físicas y primeros auxilios</div>
+                        <div class="item-file">UF121.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF121.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <h2>UC250_2 Desarrollar intervenciones de atención psicosocial domiciliaria...</h2>
+            
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0122: Mantenimiento y rehabilitación psicosocial</div>
+                        <div class="item-file">UF122.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF122.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0123: Apoyo a las gestiones cotidianas</div>
+                        <div class="item-file">UF123.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF123.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0124: Interrelación, comunicación y observación</div>
+                        <div class="item-file">UF124.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF124.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <h2>UC251_2 Desarrollar las actividades relacionadas con la gestión...</h2>
+            
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0125: Gestión, aprovisionamiento y cocina</div>
+                        <div class="item-file">UF125.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF125.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <div class="icon-pdf">PDF</div>
+                    <div>
+                        <div class="item-title">UF0126: Mantenimiento, limpieza y organización del domicilio</div>
+                        <div class="item-file">UF126.pdf</div>
+                    </div>
+                </div>
+                <a href="pdfs/UF126.pdf" target="_blank" class="btn-download">Ver / Descargar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script súper simple para las pestañas -->
+    <script>
+        function cambiarPestana(idSeccion, boton) {
+            // Ocultar todas las secciones
+            var secciones = document.querySelectorAll('.seccion');
+            for (var i = 0; i < secciones.length; i++) {
+                secciones[i].classList.remove('active');
+            }
+            
+            // Quitar la clase activa a todos los botones
+            var botones = document.querySelectorAll('.tab-btn');
+            for (var i = 0; i < botones.length; i++) {
+                botones[i].classList.remove('active');
+            }
+            
+            // Mostrar la sección elegida y marcar el botón
+            document.getElementById(idSeccion).classList.add('active');
+            boton.classList.add('active');
+        }
+    </script>
+</body>
+</html>
