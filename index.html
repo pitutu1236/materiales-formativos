@@ -50,6 +50,21 @@
         }
         .btn-download:hover { background: #388E3C; }
 
+        .btn-interactive {
+            background: #0d9488; color: white; text-decoration: none;
+            padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: bold;
+            transition: 0.2s; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;
+        }
+        .btn-interactive:hover { background: #0f766e; }
+        .item-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .banner-interactive {
+            margin-top: 15px; display: inline-flex; align-items: center; gap: 8px;
+            background: #0d9488; color: white; padding: 12px 24px; border-radius: 8px;
+            text-decoration: none; font-weight: bold; font-size: 15px;
+            box-shadow: 0 2px 8px rgba(13,148,136,0.3); transition: 0.2s;
+        }
+        .banner-interactive:hover { background: #0f766e; transform: translateY(-1px); }
+
         /* Ajustes para móviles */
         @media (max-width: 600px) {
             .item { flex-direction: column; align-items: flex-start; gap: 15px; }
@@ -64,6 +79,11 @@
     <div class="header">
         <h1>Material Formativo</h1>
         <p>Descarga de Apuntes y Temarios</p>
+        <div>
+            <a href="uf0127/" class="banner-interactive">
+                🎓 Acceder al Simulador Interactivo y 3 Exámenes de UF0127 (Semana 1)
+            </a>
+        </div>
     </div>
 
     <div class="tabs">
@@ -77,15 +97,18 @@
         <div class="bloque">
             <h2>UC1016 Preparar y apoyar las intervenciones de atención a las personas y a su entorno en el ámbito institucional indicadas por el equipo interdisciplinar</h2>
             
-            <div class="item">
+            <div class="item" style="border-left: 4px solid #0d9488;">
                 <div class="item-info">
-                    <div class="icon-pdf">PDF</div>
+                    <div class="icon-pdf" style="background: #0d9488;">WEB</div>
                     <div>
                         <div class="item-title">UF0127: Apoyo en la recepción y acogida</div>
+                        <div class="item-file" style="color: #0d9488; font-weight: 600;">✨ Web didáctica interactiva: Temario, 3 Exámenes y Casos Clínicos</div>
                     </div>
                 </div>
-                <!-- target="_blank" abre el pdf en otra pestaña. El navegador no lo bloquea. -->
-                <a href="web_cursos/pdfs/UF0127.pdf" target="_blank" class="btn-download">Descargar</a>
+                <div class="item-actions">
+                    <a href="uf0127/" class="btn-interactive">🚀 Abrir Web Interactiva</a>
+                    <a href="web_cursos/pdfs/UF0127.pdf" target="_blank" class="btn-download">Descargar PDF</a>
+                </div>
             </div>
 
             <div class="item">
